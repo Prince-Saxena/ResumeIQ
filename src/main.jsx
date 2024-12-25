@@ -25,10 +25,35 @@ import {
 import App from "./App.jsx";
 import "./index.css";
 
+
+
+class ErrorBoundary extends React.Component {
+	state = { hasError: false };
+
+	static getDerivedStateFromError() {
+		return { hasError: true };
+	}
+
+	componentDidCatch(error, info) {
+		console.log("Error:", error);
+		console.log("Info:", info);
+	}
+
+	render() {
+		if (this.state.hasError) {
+			return <h1>Something went wrong.</h1>;
+		}
+		return this.props.children;
+	}
+}
+
+
 createRoot(document.getElementById("root")).render(
+	<ErrorBoundary>
+
 	<ResumeInfoProvider>
 		<UserProvider>
-			<Router basename="/ResumeIQ">
+			<Router basename="/">
 				{" "}
 				<Routes>
 					<Route path="/" element={<App />}>
@@ -45,7 +70,7 @@ createRoot(document.getElementById("root")).render(
 									<Dashboard />
 								</ProtectedRoute>
 							}
-						/>
+							/>
 						<Route
 							path="/share&save"
 							element={
@@ -53,7 +78,7 @@ createRoot(document.getElementById("root")).render(
 									<Show />
 								</ProtectedRoute>
 							}
-						/>
+							/>
 						<Route
 							path="/user-input"
 							element={
@@ -75,4 +100,5 @@ createRoot(document.getElementById("root")).render(
 			</Router>
 		</UserProvider>
 	</ResumeInfoProvider>
+									</ErrorBoundary>
 );
