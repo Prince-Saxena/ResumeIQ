@@ -28,7 +28,8 @@ import "./index.css";
 createRoot(document.getElementById("root")).render(
 	<ResumeInfoProvider>
 		<UserProvider>
-			<Router>
+			<Router basename="/ResumeIQ">
+				{" "}
 				<Routes>
 					<Route path="/" element={<App />}>
 						<Route index element={<Home />} />
