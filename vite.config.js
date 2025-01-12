@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
 	plugins: [react()],
-	base: "/ResumeIQ/",
-	resolve: {
-		extensions: [".js", ".jsx", ".ts", ".tsx"],
+	esbuild: {
+		loader: "jsx",
+		include: /src\/.*\.js$/, // Apply the JSX loader to .js files in the src directory
 	},
 });
