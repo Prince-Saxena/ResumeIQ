@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { signInURL} from "../../assets/URL.js";
+import { signInURL } from "../../assets/URL.js";
 
 export default function SignIn() {
 	const navigate = useNavigate();
@@ -27,9 +27,10 @@ export default function SignIn() {
 			});
 			navigate("../dashboard");
 		} catch (error) {
-			if (error === "Incorrect Password!") alert("Invaild Credentials!");
-			console.log(error);
-			
+			// if (error === "Incorrect Password!")
+			alert("Invaild Credentials!");
+			// console.log(error);
+
 			// alert("Error while SignIn process!");
 			// console.error("Error Response:", error.response?.data || error.message);
 		}

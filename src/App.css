@@ -35,6 +35,10 @@ html {
 	-webkit-text-stroke: 1px blue;
 }
 
+.text-stroke{
+	-webkit-text-stroke: 1px blue;
+}
+
 @media (max-width: 1280px) and (min-width: 1040px) {
 	.hero-text {
 		text-wrap: nowrap;

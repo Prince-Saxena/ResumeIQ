@@ -22,8 +22,8 @@ const ContactUs = () => {
 			{/* Main Content */}
 			<div className="w-full mx-auto pt-24 py-16 bg-gradient-to-r from-purple-100 via-indigo-200 to-blue-300">
 				{/* Hero Section */}
-				<section className="text-center mb-16">
-					<h1 className="text-5xl sm:text-6xl font-extrabold text-purple-700 mb-6">
+				<section className="text-center  mb-16">
+					<h1 className="text-5xl  sm:text-6xl font-extrabold text-purple-700 mb-6">
 						Get in Touch
 					</h1>
 					<p className="text-lg sm:text-xl text-blue-600 mb-4">
@@ -92,7 +92,7 @@ const ContactUs = () => {
 
 				{/* Footer Section */}
 				<footer className="py-4 bg-gradient-to-r from-purple-100 via-indigo-100 to-blue-300 text-white text-stroke text-center">
-					<p className="text-blue-700">
+					<p className="text-blue-700 font-medium -tracking-wide ">
 						📚 Built with a lot of late-night coding and a dash of snacks!
 					</p>
 					<p className="text-blue-700">

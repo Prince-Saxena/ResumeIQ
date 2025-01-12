@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import sticker from "/sticker.png";
 import { signUpURL } from "../../assets/URL.js";
 
 export default function SignUp() {
@@ -27,8 +28,6 @@ export default function SignUp() {
 		setOtp(e.target.value);
 	};
 
-
-
 	const postData = async () => {
 		try {
 			const response = await axios.post(signUpURL, formData);
@@ -47,7 +46,14 @@ export default function SignUp() {
 	};
 
 	return (
-		<div className="flex justify-center items-center w-full min-h-screen bg-gradient-to-br from-blue-50 to-purple-100">
+		<div
+			className="flex justify-center  items-center w-full min-h-screen bg-gradient-to-br from-blue-50 to-purple-100"
+		>
+			{/* <div className="main flex justify-between">
+				<div className="img flex justify-center items-center">
+					<img src={sticker} alt="sticker" className="max-w-[300px] w-full" />
+				</div>
+			</div> */}
 			<form
 				onSubmit={handleSubmit}
 				className="w-full max-w-[450px] bg-white p-8 rounded-xl shadow-lg shadow-blue-300/50"
@@ -84,6 +90,7 @@ export default function SignUp() {
 						onChange={handleChange}
 						placeholder="Email"
 						className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+						autoComplete="username"
 						required
 					/>
 				</div>
@@ -98,11 +105,12 @@ export default function SignUp() {
 						placeholder="Password"
 						className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
 						required
+						autoComplete="current-password"
 					/>
 				</div>
 
 				{/* OTP Verification Section */}
-				{otpSent && (
+				{/* {otpSent && (
 					<div className="mb-6">
 						<input
 							type="text"
@@ -120,7 +128,7 @@ export default function SignUp() {
 							Verify OTP
 						</button>
 					</div>
-				)}
+				)} */}
 
 				<button
 					type="submit"
