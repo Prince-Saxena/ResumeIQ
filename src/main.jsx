@@ -73,7 +73,12 @@ const router = createHashRouter(
 			</Route>
 			<Route path="customization" element={<Customization />} />
 		</Route>
-	)
+	),
+	{
+		future: {
+			v7_startTransition: true, // ✅ Enable React Router v7 transition handling
+		},
+	}
 );
 
 // Render the application
