@@ -32,7 +32,6 @@ function Education() {
 		}));
 		// Reset input fields
 		setDegree("");
-		
 		setMajor("");
 		setStart("");
 		setEnd("");
