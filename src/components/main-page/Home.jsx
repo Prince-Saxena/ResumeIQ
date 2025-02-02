@@ -1,7 +1,5 @@
 import React from "react";
 import { HeroSection } from "../index.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBolt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Home = () => {

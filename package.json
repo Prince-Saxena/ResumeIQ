@@ -1,12 +1,8 @@
 {
 	"name": "resumebuilder",
 	"version": "0.0.0",
-<<<<<<< HEAD
-=======
-	"homepage": "https://prince-saxena.github.io/ResumeIQ/",
->>>>>>> 708e69a3fdd9c68d40eab1e8cbc517234e400ddd
 	"type": "module",
-	"homepage": "https://Prince-Saxena.github.io/ResumeIQ",
+	"homepage": "https://prince-saxena.github.io/ResumeIQ/",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
