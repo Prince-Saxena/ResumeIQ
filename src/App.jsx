@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Nav from "./components/main-page/Nav";
+import Nav from "./components/Main-Page/Nav";
 import { Outlet } from "react-router-dom";
 import { StyleProvider } from "./context/StyleContext.jsx";
 import { UserProvider, useUser } from "./context/UserContext.jsx";
 import Cookies from "js-cookie";
 
-import {jwtDecode} from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 import "./App.css";
 

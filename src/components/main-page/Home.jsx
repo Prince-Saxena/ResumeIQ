@@ -47,7 +47,7 @@ const Home = () => {
 					start: "top 60%",
 					end: "top 45%",
 					scrub: 1,
-					markers: true,
+					// markers: true,
 				},
 			}
 		);
