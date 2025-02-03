@@ -1,5 +1,5 @@
 {
-	"name": "resumebuilder",
+	"name": "resumeiq",
 	"version": "0.0.0",
 	"type": "module",
 	"homepage": "https://prince-saxena.github.io/ResumeIQ/",
@@ -53,6 +53,6 @@
 		"globals": "^15.9.0",
 		"postcss": "^8.4.47",
 		"tailwindcss": "^3.4.12",
-		"vite": "^6.0.7"
+		"vite": "^6.0.11"
 	}
 }

@@ -3,9 +3,12 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
 	plugins: [react()],
-	esbuild: {
-		loader: "jsx",
-		include: /src\/.*\.js$/, // Apply the JSX loader to .js files in the src directory
-	},
+
 	base: "/ResumeIQ",
+	compilerOptions: {
+		jsx: "react-jsx", // for React 17 and later
+	},
+	build: {
+		jsx: "react-jsx", // Ensure this is set correctly
+	},
 });
